@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Formulario de Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('J5P-N89cmqi8oAyXw')
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <img id="logo-nav" src="../logo_optimus.png" alt="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./catalogo.html">Vehiculos</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./acerca.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor">
+        <form action="">
+            <div class="form-header">
+                <div id="form">
+                    <div class="field">
+                        <h1 class="form-title">C<span>ontacto</span></h1>
+                    </div>
+                    <label for="emailjs_name" class="form-label">Nombre</label>
+                    <input type="text" name="emailjs_name" id="emailjs_name" class="form-input"
+                        placeholder="Escriba su nombre" required>
+
+                    <div class="field">
+                        <label for="emailjs_email" class="form-label">Email</label>
+                        <input type="text" name="emailjs_email" id="emailjs_email" class="form-input"
+                            placeholder="Escriba su correo" required>
+                    </div>
+                    <div class="field">
+                        <label for="emailjs_message" class="form-label">Mensaje</label>
+                        <input type="text" name="emailjs_message" id="emailjs_message" class="form-input"
+                            value="Gracias" required>
+                    </div>
+
+                    <input type="submit" id="button" value="Enviar Consulta">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+
+    <footer class="pie-de-pagina">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <ul class="navbar-footer">
+                        <li class="footer">
+                            <a href="../index.html">Inicio</a>
+                        </li>
+                        <li class="footer">
+                            <a href="./catalogo.html">Vehículos</a>
+                        </li>
+                        <li class="footer">
+                            <a href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="footer">
+                            <a href="./acerca.html">Nosotros</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <p class="derechos">© 2023 Optimus Automotores. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script type="text/javascript" src="../js/contacto.js"></script>
+</body>
+
+</html>

@@ -5,19 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimus Automotores</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <!-- Agrega los enlaces a Bootstrap CSS -->
+    <meta name="keywords" content="Grupo12" />
+    <meta name="author" content="Avila, Eggel, Hoyos, Martinez" />
+    <meta name="copyright" content="Avila, Eggel, Hoyos, Martinez" />
+    <!-- Icono -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <!-- Fin Icono -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <!-- Fin Bootstrap CSS -->
+    <!-- Enlace CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Fin CSS -->
+    <!-- Libreria animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Fin libreria animate -->
+    <!-- Libreria font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-1GZs1+LX2xU8Uy+L2g9NLo0yf5bE0rQr5tA3yfXyINnC0I7h7rPvFJLlJW+2o5z7ehB0R/U4v8n5nnXyqN/6Ng=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fin Libreria font-awesome -->
+    <!-- Libreria ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- Fin Libreria ScrollReveal -->
 </head>
 
 <body>
-    <header>    
-        <nav class="navbar">
+    <header>
+        <nav class="navbar" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
             <div class="logo">
                 <a href="index.html">
                     <img src="./logo_optimus.png" alt="Optimus Automotores">
@@ -28,26 +47,26 @@
                     <a href="index.html">Inicio</a>
                 </li>
                 <li>
-                    <a href="vehiculos.html">Vehículos</a>
+                    <a href="./pages/catalogo.html">Vehículos</a>
                 </li>
                 <li>
-                    <a href="contacto.html">Contacto</a>
+                    <a href="./pages/contacto.html">Contacto</a>
                 </li>
                 <li>
-                    <a href="nosotros.html">Nosotros</a>
+                    <a href="./pages/acerca.html">Nosotros</a>
                 </li>
             </ul>
         </nav>
-           <video onloadedmetadata="this.muted=true" autoplay loop>
+        <video onloadedmetadata="this.muted=true" autoplay loop>
             <source src="./img/auto.mp4">
-          </video>
-          
+        </video>
     </header>
     <main>
         <section class="welcome-section">
             <div class="welcome-content">
                 <h1>Bienvenidos</h1>
-                <p class="animate__animated animate__backInRight">Somos una empresa dedicada a la venta de autos de alta calidad y con los
+                <p>Somos una empresa dedicada a la venta de autos de alta
+                    calidad y con los
                     mejores precios del mercado.
                     <br>En nuestro catálogo encontrarás una amplia variedad de marcas y modelos para que puedas elegir
                     el que más
@@ -56,7 +75,7 @@
             </div>
         </section>
         <section class="seccio2">
-            <div class="animate__animated animate animate__backInDown">
+            <div id="por-que-elegirnos" class="animate__animated animate__backInDown">
                 <h2>¿Por qué elegirnos?</h2>
                 <ul>
                     <li>Excelente calidad de autos</li>
@@ -67,41 +86,164 @@
             </div>
         </section>
         <section class="gallery">
-            <div class="grid-container">
-                <div class="grid-item tile"><img src="./img/pngegg1.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg2.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg3.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg4.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg5.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg6.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg7.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg8.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg9.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg10.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg11.png" alt="auto"></div>
-                <div class="grid-item tile"><img src="./img/pngegg12.png" alt="auto"></div>
+            <div class="destacados">
+                <h2>
+                    <svg width="60" height="60" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM9 17l-4-5h8l-2 3.2L15 10h-8l2 4z" />
+                    </svg>
+                    Usados Destacados!
+                </h2>
             </div>
+            <div class="grid-container tarjeta">
+                <div class="grid-item tile">
+                    <div class="tarjeta">
+                        <img src="./img/pngegg1.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$5000</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div class="tarjeta">
+                        <img src="./img/pngegg2.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$7000</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg3.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$7500</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg4.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$7500</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg5.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$9000</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg6.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$8500</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg7.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$6000</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg8.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$7200</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg9.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$7300</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg10.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$8100</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg11.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$5400</h3>
+                    </div>
+                </div>
+                <div class="grid-item tile">
+                    <div>
+                        <img src="./img/pngegg12.png" alt="auto">
+                        <h3 class="precio" style="text-align: center;">$7600</h3>
+                    </div>
+                </div>
         </section>
     </main>
-    <footer>
-        <p>Optimus Automotores &copy; 2023 | Todos los derechos reservados</p>
-    </footer>
-    <script>
-        const sr = ScrollReveal();
+    <footer class="pie-de-pagina">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="logo">Optimus Automotores</h3>
+                    <p class="descripcion">Venta de autos nuevos y usados.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="contacto">Contacto</h5>
+                    <ul class="datos-contacto">
+                        <li>
+                            <a href="www.gmail.com" class="fa fa-envelope">
 
-        sr.reveal('.mi-clase', {
-            origin: 'right',
-            distance: '500px',
-            duration: 1000,
-            delay: 0.1,
-            opacity: 0.2,
-            easing: 'ease-in-out',
-        });
-        ScrollReveal().reveal('.tile', {
-            interval: 4,
-            reset: true
-        });
-    </script>
+                            </a> optimus-automotores@gmail.com
+                        </li>
+                        <li>
+                            <a href="tel:+541234567890" class="fa fa-phone">
+
+                            </a> (123) 456-7890
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Av.+S.+Mart%C3%ADn+1555,+C1416CRD+CABA/@-34.6061366,-58.4540429,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcca0f8a5b5217:0x6379be11bd12ff4a!8m2!3d-34.606141!4d-58.451468!16s%2Fg%2F11cs72b56_?hl=es&entry=ttu"
+                                class="fa fa-map-marker">
+
+                            </a> Av. San Martin Nº 1555 - CABA.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="siguenos">Síguenos</h5>
+                    <ul class="redes-sociales">
+                        <li>
+                            <a href="https:www.faceboock.com">
+                                <i class="fa fa-facebook"> Optimus-automotores</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twiter.com.ar">
+                                <i class="fa fa-twitter"> Optimus-automotores</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com.ar">
+                                <i class="fa fa-instagram"> Optimus-automotores</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <ul class="navbar-footer">
+                        <li class="footer">
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li class="footer">
+                            <a href="./pages/catalogo.html">Vehículos</a>
+                        </li>
+                        <li class="footer">
+                            <a href="./pages/contacto.html">Contacto</a>
+                        </li>
+                        <li class="footer">
+                            <a href="./pages/acerca.html">Nosotros</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <p class="derechos">© 2023 Optimus Automotores. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="../sitio-web/script.js"></script>
 </body>
 
 </html>

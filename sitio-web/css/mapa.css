@@ -1,0 +1,43 @@
+body {
+  
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #33475b;
+    height: 100vh;
+}
+
+.center {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #dbe4ed;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 10 px;
+    margin-top: auto;
+    border: 3px solid #dbe4ed;
+}
+
+.titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(52, 55, 59);
+    padding: 30px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.mapa {
+    height: 450px;
+    display: inline-flex; 
+    transform: translateY(-100px) translateX(450px);
+    position: relative;
+    right: 20px;
+    top: -100px;
+    margin-bottom: 30px;
+  }
